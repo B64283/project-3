@@ -7,19 +7,19 @@
 //Variables
 
 var json2 = {      
-	"Players": [ //Array, Not FOR IN LOOP!! in this case we need a regular foorloop
+	"Players": [ //Array, Not, FOR IN LOOP!! in this case we need a regular foorloop
 	      {    //objects{} inside of arrays[] 
-	            "number": "1121",
+	            "number": "11",
 	            "name": "Allison",
 			    "age": 6,
 			    "pieEatingRecord": 20,
 			    "HotdogRecord": 30,
 			    "PizzaRecord": 40,
-			    "place": "1st",
-			    "Goal": "add 5 to all records"	//no commas @end            
+			    "place": "1st"
+			    	//no commas @end            
 	     },
 	     {
-	            "Number": "0721",
+	            "number": "21",
 	            "name": "Nick",
 		 	    "age": 4,
 		 	    "pieEatingRecord": 15,
@@ -28,7 +28,7 @@ var json2 = {
 		 	    "place": "2nd"	
 		 },
 		 {	
-	            "Number": "0507",
+	            "number": "57",
 	            "name": "Jessica",
 		        "age": 31,
 		        "pieEatingRecord": 10,
@@ -42,17 +42,18 @@ var json2 = {
 var carnivalName = "Fall County Carnival";
 var KidsName = "Allison";
 var FoodLastYear = [20, 40, 50];
-var StartStory = " Allison wants to go to the " + carnivalName + ". Last year she won three eating contests! ";
+var StartStory = KidsName + "wants to go to the " + carnivalName + ". Last year she won three eating contests! ";
 var going = true
 var SheWins = true
 var AsksDad = true
 var DadgivesIn = true
-// Procedure 
+// method procedure conditional 
 function eatingcontest(going) {
      if (going === true) { 
-	     console.log(" This year " + KidsName + " is going to give it another go at the " + carnivalName + " eating contest to try to beat her last years records .\n but she needs to ask Dad for her allowance to buy a ticket for each entry. ")
+	     console.log(" This year " + KidsName + " is going to give it another go at the " + carnivalName + " eating contest to try to beat her last years records.\n but she needs to ask Dad for her allowance to buy a ticket for each entry. ")
      } else { 
-         console.log (" Darn, theres always next year for " + KidsName + " to try to beat her record. ") 
+         console.log (" Darn, theres always next year for " + KidsName + " to try to beat her record. ")
+       return going;
 	 }
 };	     
 //nested conditionals;
@@ -95,33 +96,26 @@ function HerGoal() {
  }; 
 //
 function countdown(){
-var Soc = 10;
-while (Soc > 0) {
-    console.log(Soc + "seconds on the clock");
-    Soc--;
-    };
-    console.log("seconds on the clock.");
-    console.log("Begin Eating!!");
+	var Soc = 10;
+		while (Soc > 0) {
+			console.log(Soc + "seconds left on the clock");
+			Soc--;
+			};
+			console.log("seconds on the clock.");
+			console.log("Stop Eating!!");
 	return Soc;
 	}
-
-var handleData = function (json)	{
+// use below for for lloop// ?? Can this be a nested loop// did i just use an acssessor method?
+var handleData = function (json) { //this is my accessor
 	for (var i = 0; i < json.Players.length; i++) {
-		var Player = json.Players[i]; // what ever else keys to get info from contestants
-		console.log( " ,name: " + Player.name + " ,age: " + Player.age + " ,pieEatingRecord: " + Player.pieEatingRecord); 
-	return Player;
+		var Player = json.Players[ i ]; // what ever else keys to get info from contestants
+		console.log( "number:" + Player.number +  " ,name: " + Player.name + " ,age: " + Player.age + " ,pieEatingRecord: " + Player.pieEatingRecord); 
+	return handleData;
+	
 	};
 };
-	
-handleData(json2)
-
-
-
-
-
-
-
-
+//	
+handleData(json2);
 
 
 
