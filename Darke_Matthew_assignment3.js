@@ -110,12 +110,39 @@ var handleData = function (json) { //this is my accessor
 	for (var i = 0; i < json.Players.length; i++) {
 		var Player = json.Players[ i ]; // what ever else keys to get info from contestants
 		console.log( "number:" + Player.number +  " ,name: " + Player.name + " ,age: " + Player.age + " ,pieEatingRecord: " + Player.pieEatingRecord); 
-	return handleData;
+	return handleData; // 
 	
 	};
 };
-//	
-handleData(json2);
+//Mutator accsessor
+var EatingContests = {
+		
+		"name": "records",
+		"pieEatingRecord": 20,
+	    "HotdogRecord": 30,
+		"PizzaRecord": 40, 
+		"isChamp": true,
+		"records": function() { // Method accessor 
+			
+			var totalate = this.pieEatingRecord;
+			return totalate;			
+	    },
+		"setpieEatingRecord": function(newpieEatingRecord){  //mutator
+			
+			this.pieEatingRecord = newpieEatingRecord		
+			
+			}     
+		    
+		    
+		    
+		};
+		
+console.log(" totalate is " + EatingContests.records());
+EatingContests.setpieEatingRecord(25);	
+console.log(KidsName + " Has anew pie Eating Record with " + EatingContests.records());
+
+
+//handleData(json2);
 
 
 
