@@ -41,7 +41,7 @@ var json2 = {
 	
 var carnivalName = "Fall County Carnival";
 var KidsName = "Allison";
-var FoodLastYear = [20, 40, 50];
+var FoodLastYear = [30, 40, 50];
 var StartStory = KidsName + "wants to go to the " + carnivalName + ". Last year she won three eating contests! ";
 var going = true
 var SheWins = true
@@ -136,10 +136,45 @@ var EatingContests = {
 		    
 		    
 		};
+//nested loop  eating contest
+
+var playerNames = [ "Allison", "Nick", "Jessica" ],
+    PiesPerPlayer = [25, 20, 15];
+var startOneplayer = function() {
+var playerName = playerNames[playerNumber],
+	    PiesThisPlayer = PiesPerPlayer[playerNumber];
+    console.log(playerName + "starts the eating contest to try to shoot for a goal of " + PiesThisPlayer);
+    for (var Pies = 0; Pies < PiesThisPlayer; Pies += 5){
+	    var PiesRemain = PiesThisPlayer - Pies;
+	    console.log(Pies + " devoured Hotdogs ", + PiesRemain + "to go!" );
+	    
+    }
+console.log(playerName + "finishes")
+	
+};    
+for (var playerNumber = 0; playerNumber < playerNames.length; playerNumber++){
+	startOneplayer();
+}
+
+
+
+
+
+
+
+
+
+
+//}HotdogThisPlayer = HotdogPerPlayer[playerNumber],
+  //  PizzaThisPlayer = PizzaPerPlayer[playerNumber];
+
+
+//HotdogPerPlayer =[30, 25, 20],
+ //   PizzaPerPlayer = [40, 35, 30];
 		
-console.log(" totalate is " + EatingContests.records());
-EatingContests.setpieEatingRecord(25);	
-console.log(KidsName + " Has anew pie Eating Record with " + EatingContests.records());
+//console.log(" totalate is " + EatingContests.records());
+//EatingContests.setpieEatingRecord(25);	
+//console.log(KidsName + " Has anew pie Eating Record with " + EatingContests.records());
 
 
 //handleData(json2);
