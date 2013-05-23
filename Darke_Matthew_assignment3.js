@@ -96,14 +96,14 @@ function HerGoal() {
  }; 
 //
 function countdown(){
-	var Soc = 10;
-		while (Soc > 0) {
-			console.log(Soc + "seconds left on the clock");
-			Soc--;
+	var Sts = 5;
+		while (Sts > 0) {
+			console.log(Sts + "seconds to start");
+			Sts--;
 			};
-			console.log("seconds on the clock.");
-			console.log("Stop Eating!!");
-	return Soc;
+			console.log("0 seconds.");
+			console.log("start Eating!!");
+	return Sts;
 	}
 // use below for for lloop// ?? Can this be a nested loop// did i just use an acssessor method?
 var handleData = function (json) { //this is my accessor
@@ -146,20 +146,74 @@ var playerName = playerNames[playerNumber],
     console.log(playerName + "starts the eating contest to try to shoot for a goal of " + PiesThisPlayer);
     for (var Pies = 0; Pies < PiesThisPlayer; Pies += 5){
 	    var PiesRemain = PiesThisPlayer - Pies;
-	    console.log(Pies + " devoured Hotdogs ", + PiesRemain + "to go!" );
+	    console.log(Pies + " devoured pies ", + PiesRemain + "to go!" );
 	    
     }
 console.log(playerName + "finishes")
 	
 };    
+var playerNames = [ "Allison", "Nick", "Jessica" ],
+    HotDogsPerPlayer = [30, 25, 20];
+var startTwoplayer = function() {
+var playerName = playerNames[playerNumber],
+	    HotDogsThisPlayer = HotDogsPerPlayer[playerNumber];
+    console.log(playerName + "starts the eating contest to try to shoot for a goal of " + HotDogsThisPlayer);
+    for (var HotDogs = 0; HotDogs < HotDogsThisPlayer; HotDogs += 5){
+	    var HotDogsRemain = HotDogsThisPlayer - HotDogs;
+	    console.log(HotDogs + " devoured HotDogs ", + HotDogsRemain + "to go!" );
+	    
+    }
+console.log(playerName + "finishes")
+	
+};    
+var playerNames = [ "Allison", "Nick", "Jessica" ],
+    PizzaPerPlayer = [30, 25, 20];
+var startThreeplayer = function() {
+var playerName = playerNames[playerNumber],
+	    PizzaThisPlayer = PizzaPerPlayer[playerNumber];
+    console.log(playerName + "starts the eating contest to try to shoot for a goal of " + PizzaThisPlayer);
+    for (var Pizza = 0; Pizza < PizzaThisPlayer; Pizza += 5){
+	    var PizzaRemain = PizzaThisPlayer - Pizza;
+	    console.log(Pizza + " devoured slices of Pizza ", + PizzaRemain + "to go!" );
+	    
+    }
+console.log(playerName + "finishes")
+	
+};    
+// boolean logic practice
+var KidName = "Allison";
+var p = true, q = true, r = false;
+  
+  function beatrecord ( p, q, r) {
+  	var Wins = ((p && q) || r)
+  	    if ((p && q) || r) {
+        console.log(" you guessed it KidName"  + KidsName + " Wins! " );
+     } else {
+        console.log(KidName + "Goes home with a belly ache.");
+       return Wins;        
+       }
+   };  
+///method procedure Method function
+
+
+
+
+
+
 for (var playerNumber = 0; playerNumber < playerNames.length; playerNumber++){
-	startOneplayer();
-}
+	 startOneplayer()
+};
+for (var playerNumber = 0; playerNumber < playerNames.length; playerNumber++){
+	 startTwoplayer()
+};
+for (var playerNumber = 0; playerNumber < playerNames.length; playerNumber++){
+	 startThreeplayer()
+};
 
 
 
 
-
+countdown();
 
 
 
@@ -174,10 +228,49 @@ for (var playerNumber = 0; playerNumber < playerNames.length; playerNumber++){
 		
 //console.log(" totalate is " + EatingContests.records());
 //EatingContests.setpieEatingRecord(25);	
-//console.log(KidsName + " Has anew pie Eating Record with " + EatingContests.records());
+//console.log(KidsName + " Has anew pie Eating Record with " + EatingContests.records());//mutator
 
 
 //handleData(json2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
