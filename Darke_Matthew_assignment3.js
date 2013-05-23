@@ -84,13 +84,13 @@ var buyTickets = function(givenAllowance) {
   }
 };
 var gotTickets = buyTickets(55);  //use console.log below at end main code
-console.log(" Dad gave her enough to buy all " + gotTickets + " Tickets! ");
+//console.log(" Dad gave her enough to buy all " + gotTickets + " Tickets! ");
 
 // string function// may need help with return?
 function HerGoal() {
 	var Champion = "Last years Champion";
-	 var beatEachRecord =  "By five more each contest"; 
-	    console.log( " being " + Champion + ", it's certant that " + KidsName + " is determined to beat her records " + beatEachRecord + ". Thats a streach!! ");
+	 var beatEachRecord =  "By five more "; 
+	    console.log( " being " + Champion + ", it's certant that " + KidsName + " is determined to beat her Pie eating record " + beatEachRecord + ". Thats a streach!! ");
  return Champion, beatEachRecord;
  
  }; 
@@ -124,8 +124,8 @@ var EatingContests = {
 		"isChamp": true,
 		"records": function() { // Method accessor 
 			
-			var totalate = this.pieEatingRecord;
-			return totalate;			
+			var lasttotalate = this.pieEatingRecord;
+			return lasttotalate;			
 	    },
 		"setpieEatingRecord": function(newpieEatingRecord){  //mutator
 			
@@ -177,7 +177,7 @@ var playerName = playerNames[playerNumber],
 	    console.log(Pizza + " devoured slices of Pizza ", + PizzaRemain + "to go!" );
 	    
     }
-console.log(playerName + "finishes")
+console.log(playerName + " finishes ")
 	
 };    
 // boolean logic practice
@@ -187,19 +187,32 @@ var p = true, q = true, r = false;
   function beatrecord ( p, q, r) {
   	var Wins = ((p && q) || r)
   	    if ((p && q) || r) {
-        console.log(" you guessed it KidName"  + KidsName + " Wins! " );
+        console.log(" you guessed it "  + KidsName + " Wins! " );
      } else {
         console.log(KidName + "Goes home with a belly ache.");
        return Wins;        
        }
    };  
-///method procedure Method function
+/// Method procedure
+function WinsAgain() {
+	if (SheWins === true) {
+	console.log(" the eating contest champ is " + KidsName + " And all she could do now is puke " ); 
+	} else {
+	    Console.log ("she goes home with a bellyache!" );
+    }
+    };
 
+//////////////
+//outputs
 
-
-
-
-
+console.log(StartStory);
+eatingcontest(going);
+getsmoney();
+console.log(" Dad gave her enough to buy all " + gotTickets + " Tickets! ");
+console.log("This year" + KidsName + "is compeating against two of lastyears top contestants Nick and Jessica");
+HerGoal();
+console.log ("She eagerly waits for the count down");
+countdown();
 for (var playerNumber = 0; playerNumber < playerNames.length; playerNumber++){
 	 startOneplayer()
 };
@@ -209,29 +222,29 @@ for (var playerNumber = 0; playerNumber < playerNames.length; playerNumber++){
 for (var playerNumber = 0; playerNumber < playerNames.length; playerNumber++){
 	 startThreeplayer()
 };
+beatrecord ( p, q, r);
+WinsAgain();
 
 
 
 
-countdown();
 
 
 
 
 
-//}HotdogThisPlayer = HotdogPerPlayer[playerNumber],
-  //  PizzaThisPlayer = PizzaPerPlayer[playerNumber];
 
 
-//HotdogPerPlayer =[30, 25, 20],
- //   PizzaPerPlayer = [40, 35, 30];
+
+
+
 		
-//console.log(" totalate is " + EatingContests.records());
-//EatingContests.setpieEatingRecord(25);	
-//console.log(KidsName + " Has anew pie Eating Record with " + EatingContests.records());//mutator
+console.log("  last year pie total is " + EatingContests.records());
+EatingContests.setpieEatingRecord(25);	
+console.log(KidsName + " Has anew pie Eating Record with " + EatingContests.records());//mutator
 
 
-//handleData(json2);
+handleData(json2);
 
 
 
