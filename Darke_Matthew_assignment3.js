@@ -238,13 +238,13 @@ WinsAgain();
 
 
 
-		
+handleData(json2);
 console.log("  last year pie total is " + EatingContests.records());
 EatingContests.setpieEatingRecord(25);	
 console.log(KidsName + " Has anew pie Eating Record with " + EatingContests.records());//mutator
 
 
-handleData(json2);
+
 
 
 
