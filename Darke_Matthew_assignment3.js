@@ -86,7 +86,7 @@ var buyTickets = function(givenAllowance) {
 var gotTickets = buyTickets(55);  //use console.log below at end main code
 //console.log(" Dad gave her enough to buy all " + gotTickets + " Tickets! ");
 
-// string function// may need help with return?
+// string function// 
 function HerGoal() {
 	var Champion = "Last years Champion";
 	 var beatEachRecord =  "By five more "; 
@@ -105,8 +105,8 @@ function countdown(){
 			console.log("start Eating!!");
 	return Sts;
 	}
-// use below for for lloop// ?? Can this be a nested loop// did i just use an acssessor method?
-var handleData = function (json) { //this is my accessor
+// use below for for lloop// 
+var handleData = function (json) { 
 	for (var i = 0; i < json.Players.length; i++) {
 		var Player = json.Players[ i ]; // what ever else keys to get info from contestants
 		console.log( "number:" + Player.number +  " ,name: " + Player.name + " ,age: " + Player.age + " ,pieEatingRecord: " + Player.pieEatingRecord); 
@@ -136,7 +136,7 @@ var EatingContests = {
 		    
 		    
 		};
-//nested loop  eating contest
+//nested loop  eating contes
 
 var playerNames = [ "Allison", "Nick", "Jessica" ],
     PiesPerPlayer = [25, 20, 15];
@@ -180,7 +180,7 @@ var playerName = playerNames[playerNumber],
 console.log(playerName + " finishes ")
 	
 };    
-// boolean logic practice
+// boolean logic
 var KidName = "Allison";
 var p = true, q = true, r = false;
   
